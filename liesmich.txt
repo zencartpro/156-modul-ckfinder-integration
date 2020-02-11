@@ -4,7 +4,7 @@ In der deutschen Zen Cart Version 1.5.6 ist der CKEditor als Standard HTML Edito
 Über den CKEditor können keine Bilder (z.B. in eine Artikelbeschreibung oder eine Define Page oder EZ Page) hochgeladen werden, da der CKEditor das in der Standardversion nicht unterstützt.
 Dafür ist die kommerzielle Erweiterung CKFinder erforderlich.
 Dieses Plugin ermöglicht die Nutzung des kommerziellen CKFinder-Dateimanagers zum Hochladen und Auswählen von Bildern über den CKEditor in der Zen Cart Administration.
-Die aktuelle Version 3.5.0 des CKFinder wird mitgeliefert.
+Die aktuelle Version 3.5.1 des CKFinder wird mitgeliefert.
 
 Voraussetzungen:
 - eine für den vorgesehenen Gebrauch geeignetete CKFinder Lizenz (Details dazu auf https://ckeditor.com/ckfinder/)
@@ -36,6 +36,7 @@ Das assets Verzeichnis wird im Shopverzeichnis angelegt, der absolute Pfad entsp
 Die URL zum assets Verszeichnis entspricht der in Ihrer includes/configure.php bei define('HTTPS_SERVER', 'https://www.meinshop.de'); angegebenen URL mit /assets dahinter
 
 3. 
+Im Ordner NEUE DATEIEN den Ordner DEINADMIN auf den Namen Ihres admin Verezichnisses umbenennen.
 Nun die Ordner/Dateien aus dem Ordner NEUE DATEIEN in der vorgegebenen Struktur ins Shopverzeichnis hochladen. Dabei werden keine bestehenden Dateien überschrieben
 
 4. 

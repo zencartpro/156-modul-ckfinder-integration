@@ -12,6 +12,7 @@ use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\ClientException;
 use Spatie\Dropbox\Exceptions\BadRequest;
 use GuzzleHttp\Exception\RequestException;
+use GrahamCampbell\GuzzleFactory\GuzzleFactory;
 
 class Client
 {
@@ -51,7 +52,7 @@ class Client
     {
         $this->accessToken = $accessToken;
 
-        $this->client = $client ?? new GuzzleClient();
+        $this->client = $client ?? new GuzzleClient(['handler' => GuzzleFactory::handler()]);
 
         $this->maxChunkSize = ($maxChunkSize < self::MAX_CHUNK_SIZE ? ($maxChunkSize > 1 ? $maxChunkSize : 1) : self::MAX_CHUNK_SIZE);
         $this->maxUploadChunkRetries = $maxUploadChunkRetries;
@@ -537,6 +538,15 @@ class Client
         return ($path === '') ? '' : '/'.$path;
     }
 
+    protected function getEndpointUrl(string $subdomain, string $endpoint): string
+    {
+        if (count($parts = explode('::', $endpoint)) === 2) {
+            [$subdomain, $endpoint] = $parts;
+        }
+
+        return "https://{$subdomain}.dropboxapi.com/2/{$endpoint}";
+    }
+
     /**
      * @param string $endpoint
      * @param array $arguments
@@ -555,7 +565,7 @@ class Client
         }
 
         try {
-            $response = $this->client->post("https://content.dropboxapi.com/2/{$endpoint}", [
+            $response = $this->client->post($this->getEndpointUrl('content', $endpoint), [
                 'headers' => $this->getHeaders($headers),
                 'body' => $body,
             ]);
@@ -575,7 +585,7 @@ class Client
                 $options['json'] = $parameters;
             }
 
-            $response = $this->client->post("https://api.dropboxapi.com/2/{$endpoint}", $options);
+            $response = $this->client->post($this->getEndpointUrl('api', $endpoint), $options);
         } catch (ClientException $exception) {
             throw $this->determineException($exception);
         }

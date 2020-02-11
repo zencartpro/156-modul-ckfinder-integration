@@ -100,10 +100,6 @@ class CopiedFile extends ExistingFile
      */
     public function hasAllowedExtension()
     {
-        if (strpos($this->fileName, '.') === false) {
-            return true;
-        }
-
         $extension = $this->getExtension();
 
         return parent::hasAllowedExtension() &&

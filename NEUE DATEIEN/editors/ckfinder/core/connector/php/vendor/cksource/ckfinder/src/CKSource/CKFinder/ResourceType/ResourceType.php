@@ -15,6 +15,7 @@
 namespace CKSource\CKFinder\ResourceType;
 
 use CKSource\CKFinder\Backend\Backend;
+use CKSource\CKFinder\Filesystem\File\File;
 use CKSource\CKFinder\ResizedImage\ResizedImageRepository;
 use CKSource\CKFinder\Thumbnail\ThumbnailRepository;
 
@@ -89,6 +90,14 @@ class ResourceType
     public function isAllowedExtension($extension)
     {
         $extension = strtolower(ltrim($extension, '.'));
+
+        if ($extension === strtolower(File::NO_EXTENSION)) {
+            return false;
+        }
+
+        if (!$extension) {
+            $extension = strtolower(File::NO_EXTENSION);
+        }
 
         $allowed = $this->configNode['allowedExtensions'];
         $denied = $this->configNode['deniedExtensions'];
