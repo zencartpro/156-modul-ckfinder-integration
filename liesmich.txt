@@ -9,10 +9,13 @@ Die aktuelle Version 3.5.1.1 des CKFinder wird mitgeliefert.
 Voraussetzungen:
 - eine für den vorgesehenen Gebrauch geeignetete CKFinder Lizenz (Details dazu auf https://ckeditor.com/ckfinder/)
 - fixe IP
-- Zen Cart 1.5.6 deutsch
+- Zen Cart 1.5.6e deutsch
 
 Ohne Lizenz arbeitet dieses Plugin im Demo-Modus. 
 Es liegt an Ihnen, sicherzustellen, dass Ihre Nutzung mit den Lizenzanforderungen übereinstimmt.
+
+Dieses Modul ist auf dem Stand von 1.5.6e
+Bevor Sie Ihren Zen Cart Shop weiter modifizieren, stellen Sie sicher, dass Sie die aktuelle deutsche Zen Cart Version 1.5.6e verwenden.
 
 
 INSTALLATION:
