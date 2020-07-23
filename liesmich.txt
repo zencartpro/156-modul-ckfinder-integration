@@ -53,7 +53,12 @@ In diese Datei werden von der Zen Cart Administrationen Informationen geschriebe
 5.
 Stellen Sie sicher, dass Sie unter Konfiguration > Shopwartung > diese IP Adressen ausschließen Ihre eigene IP Adresse eingetragen haben.
 
-6. 
+6.
+Gehen Sie nun in die Artikelbearbeitung.
+Wenn Sie nun z.B. in einer Artikelbeschreibung im CKEditor auf das Bildsymbol clicken, steht dort der neue Reiter Hochladen zur Verfügung
+Ebenso neu der Button Server durchsuchen, mit dem auf bereits ins assets Verzeichnis hochgeladene Bilder zugegriffen werden kann.
+
+7. 
 Lizensierung
 Nachdem Sie eine Lizenz für CKFinder gekauft haben, bearbeiten Sie /editors/ckfinder/config.php und geben Ihren Lizenzschlüssel und den Lizenznamen ein. 
 $config['licenseName'] = '';
