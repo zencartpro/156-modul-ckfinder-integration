@@ -3,16 +3,16 @@
 namespace Spatie\Dropbox;
 
 use Exception;
+use GrahamCampbell\GuzzleFactory\GuzzleFactory;
+use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\PumpStream;
 use GuzzleHttp\Psr7\StreamWrapper;
-use Psr\Http\Message\StreamInterface;
-use GuzzleHttp\Client as GuzzleClient;
 use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\Exception\ClientException;
+use Psr\Http\Message\StreamInterface;
 use Spatie\Dropbox\Exceptions\BadRequest;
-use GuzzleHttp\Exception\RequestException;
-use GrahamCampbell\GuzzleFactory\GuzzleFactory;
 
 class Client
 {
@@ -113,6 +113,21 @@ class Client
         }
 
         return $this->rpcEndpointRequest('sharing/create_shared_link_with_settings', $parameters);
+    }
+
+    /**
+     * Search a file or folder in the user's Dropbox.
+     *
+     * @link https://www.dropbox.com/developers/documentation/http/documentation#files-search
+     */
+    public function search(string $query, bool $includeHighlights = false)
+    {
+        $parameters = [
+            'query' => $query,
+            'include_highlights' => $includeHighlights,
+        ];
+
+        return $this->rpcEndpointRequest('files/search_v2', $parameters);
     }
 
     /**
