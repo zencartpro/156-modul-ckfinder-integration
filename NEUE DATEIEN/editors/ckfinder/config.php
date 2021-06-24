@@ -2,7 +2,7 @@
 
 /*
  * CKFinder Configuration File for Zen Cart 1.5.6 German
- * 2020-07-23 webchills
+ * 2021-06-24 webchills
  * For the official documentation visit https://ckeditor.com/docs/ckfinder/ckfinder3-php/
  */
 

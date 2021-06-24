@@ -4,7 +4,7 @@
  * CKFinder
  * ========
  * https://ckeditor.com/ckfinder/
- * Copyright (c) 2007-2020, CKSource - Frederico Knabben. All rights reserved.
+ * Copyright (c) 2007-2021, CKSource - Frederico Knabben. All rights reserved.
  *
  * The software, this file and its contents are subject to the CKFinder
  * License. Please read the license.txt file before using, installing, copying,
@@ -63,7 +63,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
  */
 class CKFinder extends Container implements HttpKernelInterface
 {
-    const VERSION = '3.5.1.1';
+    const VERSION = '3.5.1.2';
 
     const COMMANDS_NAMESPACE = 'CKSource\\CKFinder\\Command\\';
     const PLUGINS_NAMESPACE = 'CKSource\\CKFinder\\Plugin\\';

@@ -1,21 +1,27 @@
-CKFinder Integration für Zen Cart 1.5.6
+CKFinder 3.5.1.2 Integration für Zen Cart 1.5.6
 
 In der deutschen Zen Cart Version 1.5.6 ist der CKEditor als Standard HTML Editor im Adminbereich bereits vorintegriert.
 Über den CKEditor können keine Bilder (z.B. in eine Artikelbeschreibung oder eine Define Page oder EZ Page) hochgeladen werden, da der CKEditor das in der Standardversion nicht unterstützt.
 Dafür ist die kommerzielle Erweiterung CKFinder erforderlich.
 Dieses Plugin ermöglicht die Nutzung des kommerziellen CKFinder-Dateimanagers zum Hochladen und Auswählen von Bildern über den CKEditor in der Zen Cart Administration.
-Die aktuelle Version 3.5.1.1 des CKFinder wird mitgeliefert.
+Die aktuelle Version 3.5.1.2 des CKFinder wird mitgeliefert.
 
 Voraussetzungen:
 - eine für den vorgesehenen Gebrauch geeignetete CKFinder Lizenz (Details dazu auf https://ckeditor.com/ckfinder/)
 - fixe IP
-- Zen Cart 1.5.6e deutsch
+- Zen Cart 1.5.6f deutsch
 
 Ohne Lizenz arbeitet dieses Plugin im Demo-Modus. 
 Es liegt an Ihnen, sicherzustellen, dass Ihre Nutzung mit den Lizenzanforderungen übereinstimmt.
 
-Dieses Modul ist auf dem Stand von 1.5.6e
-Bevor Sie Ihren Zen Cart Shop weiter modifizieren, stellen Sie sicher, dass Sie die aktuelle deutsche Zen Cart Version 1.5.6e verwenden.
+Dieses Modul ist auf dem Stand von 1.5.6f
+Bevor Sie Ihren Zen Cart Shop weiter modifizieren, stellen Sie sicher, dass Sie die aktuelle deutsche Zen Cart Version 1.5.6f verwenden.
+
+Changelog 3.5.1.2
+24.06.2021
+* CKFinder auf Version 3.5.1.2 aktualisiert
+* Geänderte Dateien auf den Stand von 1.5.6f gebracht
+* jQuery CKFinder auf 2.1.3 aktualisiert, CKFinder unterstützt 3.6.0 nicht
 
 
 INSTALLATION:
@@ -35,7 +41,7 @@ ca. Zeile 69 und 70 finden Sie folgende Einträge:
 'root'         => '/var/www/xxx/assets/',
 
 Ändern Sie auf den entsprechenden echten absoluten Pfad und die entsprechende URL Ihres Shops
-Das assets Verzeichnis wird im Shopverzeichnis angelegt, der absolute Pfad entspricht daher dem der in Ihrer includes/configure.php bei define('DIR_FS_CATALOG', '/xxx/xxx/xxx/'); angebene ist mit assets dahinter,
+Das assets Verzeichnis wird im Shopverzeichnis angelegt, der absolute Pfad entspricht daher dem der in Ihrer includes/configure.php bei define('DIR_FS_CATALOG', '/xxx/xxx/xxx/'); angegeben ist mit assets dahinter,
 Die URL zum assets Verszeichnis entspricht der in Ihrer includes/configure.php bei define('HTTPS_SERVER', 'https://www.meinshop.de'); angegebenen URL mit /assets dahinter
 
 3. 
@@ -64,3 +70,9 @@ Nachdem Sie eine Lizenz für CKFinder gekauft haben, bearbeiten Sie /editors/ckf
 $config['licenseName'] = '';
 $config['licenseKey']  = '';
 Dies aktiviert alle kommerziellen Funktionen von CKFinder, die mit Ihrer Lizenz verbunden sind.
+
+
+UPDATE VON ÄLTEREN VERSIONEN DIESES PLUGINS
+Falls Sie das Plugin bereits in Ihrem 1.5.6 Shop verwenden und auf Version 3.5.1.2 aktualisieren wollen, stellen Sie erst sicher, dass Sie bereits auf Zen cart 1.5.6f deutsch aktualisiert haben
+Danach gehen Sie genauso vor wie unter Neuinstallation beschrieben.
+In Ihrem Fall werden dann beim Upload der neuen Dateien bereits vorhandene überschrieben
