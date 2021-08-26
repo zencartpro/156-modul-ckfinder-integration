@@ -1,10 +1,10 @@
-CKFinder 3.5.1.2 Integration für Zen Cart 1.5.6
+CKFinder 3.5.2 Integration für Zen Cart 1.5.6
 
 In der deutschen Zen Cart Version 1.5.6 ist der CKEditor als Standard HTML Editor im Adminbereich bereits vorintegriert.
 Über den CKEditor können keine Bilder (z.B. in eine Artikelbeschreibung oder eine Define Page oder EZ Page) hochgeladen werden, da der CKEditor das in der Standardversion nicht unterstützt.
 Dafür ist die kommerzielle Erweiterung CKFinder erforderlich.
 Dieses Plugin ermöglicht die Nutzung des kommerziellen CKFinder-Dateimanagers zum Hochladen und Auswählen von Bildern über den CKEditor in der Zen Cart Administration.
-Die aktuelle Version 3.5.1.2 des CKFinder wird mitgeliefert.
+Die aktuelle Version 3.5.2 des CKFinder wird mitgeliefert.
 
 Voraussetzungen:
 - eine für den vorgesehenen Gebrauch geeignetete CKFinder Lizenz (Details dazu auf https://ckeditor.com/ckfinder/)
@@ -16,6 +16,10 @@ Es liegt an Ihnen, sicherzustellen, dass Ihre Nutzung mit den Lizenzanforderunge
 
 Dieses Modul ist auf dem Stand von 1.5.6f
 Bevor Sie Ihren Zen Cart Shop weiter modifizieren, stellen Sie sicher, dass Sie die aktuelle deutsche Zen Cart Version 1.5.6f verwenden.
+
+Changelog 3.5.2
+26.08.2021
+* CKFinder auf Version 3.5.2 aktualisiert
 
 Changelog 3.5.1.2
 24.06.2021
@@ -73,6 +77,6 @@ Dies aktiviert alle kommerziellen Funktionen von CKFinder, die mit Ihrer Lizenz 
 
 
 UPDATE VON ÄLTEREN VERSIONEN DIESES PLUGINS
-Falls Sie das Plugin bereits in Ihrem 1.5.6 Shop verwenden und auf Version 3.5.1.2 aktualisieren wollen, stellen Sie erst sicher, dass Sie bereits auf Zen cart 1.5.6f deutsch aktualisiert haben
+Falls Sie das Plugin bereits in Ihrem 1.5.6 Shop verwenden und auf Version 3.5.2 aktualisieren wollen, stellen Sie erst sicher, dass Sie bereits auf Zen Cart 1.5.6f deutsch aktualisiert haben
 Danach gehen Sie genauso vor wie unter Neuinstallation beschrieben.
 In Ihrem Fall werden dann beim Upload der neuen Dateien bereits vorhandene überschrieben

@@ -65,6 +65,7 @@ class ExceptionHandler implements EventSubscriberInterface
 
     public function onCKFinderError(ExceptionEvent $event)
     {
+        var_dump('EH');
         $throwable = $event->getThrowable();
 
         $exceptionCode = $throwable->getCode() ?: Error::UNKNOWN;
